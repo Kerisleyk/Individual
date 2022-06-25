@@ -1,0 +1,66 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 20%;
+    // height: 50%;
+
+    margin-top: 6%;
+    background-color: #333333;
+    border-radius: 6px;
+  
+}
+
+
+.btnLoginBG {
+    background-color:#458AF1;
+    width: 100%;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color: white;
+}
+
+.btnLoginBG2{
+ 
+    width: 100%;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 3%;
+  
+
+ 
+}
+
+.btnLoginBG3{
+    background-color:#3F51B5;
+    width: 100%;
+    text-align: center;
+ 
+    color: white;
+
+    margin-bottom:50%; 
+    margin-top: 2%;
+
+}
+
+
+
+
+
+
+.foto1{
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 15px;
+    border-radius: 6px;
+}
+.text{
+    margin-left: 40%;
+}

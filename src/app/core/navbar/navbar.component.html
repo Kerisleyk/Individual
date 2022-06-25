@@ -1,1 +1,13 @@
-<p>navbar works!</p>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>My App</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      
+      <button mat-button [routerLink]="['']">home</button>
+      <button  mat-button [routerLink]="['/login']">Login</button>
+      <button mat-button [routerLink]="['/cadastro']">cadastro</button>
+    </mat-toolbar-row>
+</mat-toolbar>

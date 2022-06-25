@@ -7,6 +7,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { AuthModule } from './auth/auth.module';
 import { AuthRoutingModule } from './auth/auth-routing.module';
+import { CoreModule } from './core/core.module';
+import { HotToastModule } from '@ngneat/hot-toast';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { AuthRoutingModule } from './auth/auth-routing.module';
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    CoreModule,
+    HotToastModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
