@@ -4,6 +4,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { HotToastService } from '@ngneat/hot-toast';
+import { User } from 'src/app/core/models/user';
 
 @Component({
   selector: 'app-cadastro',
@@ -11,18 +12,10 @@ import { HotToastService } from '@ngneat/hot-toast';
   styleUrls: ['./cadastro.component.scss'],
 })
 export class CadastroComponent implements OnInit {
+  hide = true;
+  user: User = {} as User
 
-  imagem = 'https://www.unitur.com.br/wp-content/uploads/2020/04/picture-2606675_1280-768x512.jpg';
-  signupForm = this.fb.group(
-    {
-      nome: ['', [Validators.required]],
-      nick: ['', [Validators.required]],
-      email: ['', [Validators.required, Validators.email]],
-      senha: ['', [Validators.required, Validators.minLength(8)]],
-      confirma_senha: [''],
-    },
-  );
-
+  imagem = 'https://s3.amazonaws.com/thinkific/file_uploads/220759/images/c2f/9d3/bf0/marcas2.png';
 
    constructor(
     private fb: FormBuilder,
@@ -30,7 +23,7 @@ export class CadastroComponent implements OnInit {
   ) {}
 
   onSubmit() {
-          this.toast.success('Cadastro Realizado')
+   this.toast.success('Cadastro Realizado')
   }
 
 

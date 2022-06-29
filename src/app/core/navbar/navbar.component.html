@@ -1,13 +1,15 @@
 <mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <span>My App</span>
-      <span class="example-spacer"></span>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
-      </button>
-      
-      <button mat-button [routerLink]="['']">home</button>
-      <button  mat-button [routerLink]="['/login']">Login</button>
-      <button mat-button [routerLink]="['/cadastro']">cadastro</button>
-    </mat-toolbar-row>
+  <mat-toolbar-row>   
+    <span>
+      <button mat-button [routerLink]="['']">My App</button></span>
+    <span class="example-spacer"></span>
+    <button mat-button [matMenuTriggerFor]="menu" mat-icon-button class="example-icon" >
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item [routerLink]="['/listagem-cursos']">Home</button>
+        <button mat-menu-item [routerLink]="['/login']">Login</button>
+        <button mat-menu-item [routerLink]="['/cadastro']">Cadastro</button>
+      </mat-menu>
+      <mat-icon>menu</mat-icon>
+    </button>
+  </mat-toolbar-row>
 </mat-toolbar>

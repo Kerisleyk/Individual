@@ -1,1 +1,39 @@
-<p>adicao-cursos works!</p>
+<form #form="ngForm">
+    <mat-form-field appearance="fill">
+        <mat-label>nome</mat-label>
+        <input name="nome" matInput [(ngModel)]="cursos.nome" required />
+        <mat-error ng-show="form.nome.$error.required">Campo obrigatório</mat-error>
+        <mat-icon matPrefix>person</mat-icon>
+    </mat-form-field>
+
+    
+    <mat-form-field appearance="fill">
+        <mat-label>curso</mat-label>
+        <input name="curso" matInput [(ngModel)]="cursos.curso" required />
+        <mat-error ng-show="form.NICK.$error.required">Curso é obrigatório</mat-error>
+        <mat-icon matPrefix>pin_drop</mat-icon>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+        <mat-label>duração</mat-label>
+        <input name="duracao" matInput [(ngModel)]="cursos.duracao" required />
+        <mat-error ng-show="form.NICK.$error.required">Duração do cursos é obrigatório</mat-error>
+        <mat-icon matPrefix>pin_drop</mat-icon>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+        <mat-label>descrição</mat-label>
+        <input name="descricao" matInput [(ngModel)]="cursos.descricao" required />
+        <mat-error ng-show="form.NICK.$error.required">Descrição do Curso é obrigatório</mat-error>
+        <mat-icon matPrefix>pin_drop</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>imagem</mat-label>
+        <input name="imagem" matInput [(ngModel)]="cursos.imagem" required />
+        <mat-error ng-show="form.NICK.$error.required">Imagem é Obrigatoria</mat-error>
+        <mat-icon matPrefix>photo</mat-icon>
+    </mat-form-field>
+    
+    <button (click)="onSubmit()" mat-stroked-button color="warn" [disabled]="form.invalid">adicionar</button>
+</form>

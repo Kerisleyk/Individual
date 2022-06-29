@@ -10,7 +10,7 @@ import { AuthService } from 'src/app/core/service/auth/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  imagem = 'https://www.unitur.com.br/wp-content/uploads/2020/04/picture-2606675_1280-768x512.jpg';
+  imagem = 'https://miro.medium.com/max/960/0*xH5iXkoyh03RflOF.jpg';
   
   loginForm = this.fb.group({
     email: ['', [Validators.required, Validators.email]],

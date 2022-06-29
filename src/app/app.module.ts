@@ -9,6 +9,7 @@ import { AuthModule } from './auth/auth.module';
 import { AuthRoutingModule } from './auth/auth-routing.module';
 import { CoreModule } from './core/core.module';
 import { HotToastModule } from '@ngneat/hot-toast';
+import { CursosModule } from './cursos/cursos.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HotToastModule } from '@ngneat/hot-toast';
     NoopAnimationsModule,
     MatIconModule,
     CoreModule,
-    HotToastModule.forRoot()
+    HotToastModule.forRoot(),
+    CursosModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
