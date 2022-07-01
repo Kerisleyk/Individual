@@ -10,10 +10,13 @@ import { AuthRoutingModule } from './auth/auth-routing.module';
 import { CoreModule } from './core/core.module';
 import { HotToastModule } from '@ngneat/hot-toast';
 import { CursosModule } from './cursos/cursos.module';
+import { HomeComponent } from './home/home.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     AuthModule,
@@ -25,6 +28,7 @@ import { CursosModule } from './cursos/cursos.module';
     CoreModule,
     HotToastModule.forRoot(),
     CursosModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

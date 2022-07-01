@@ -5,30 +5,44 @@ import { Cursos } from '../models/cursos';
   providedIn: 'root'
 })
 export class CursosService {
-  cursos: Cursos [] = [
+  cursos: Cursos[] = [
     {
-    nome: 'material',
-    imagem: 'https://descargarsoftwaregratis.com/wp-content/uploads/2021/10/Angular-Desde-Cero.jpeg',
-    curso: 'material angular',
-    duracao: '4 meses',
-    descricao: 'asdasdasd',
-  },
-  {
-    nome: 'material',
-    imagem: 'https://descargarsoftwaregratis.com/wp-content/uploads/2021/10/Angular-Desde-Cero.jpeg',
-    curso: 'material angular',
-    duracao: '4 meses',
-    descricao: 'asdasdasd',
-  },    
-]  
+      nome: 'material',
+      imagem: 'https://descargarsoftwaregratis.com/wp-content/uploads/2021/10/Angular-Desde-Cero.jpeg',
+      curso: 'material angular',
+      duracao: '4 meses',
+      descricao: 'Curso Completo de AngularMaterial',
+      valor: 1,
+      emPromocao: true,
+      valorComDesconto: 3,
+      desconto: 4,
 
-getCursos(): Cursos[]{
-  return this.cursos;
-}
 
-addCursos(cursos: Cursos){
-  this.cursos.push(cursos);
-}
+    },
+    {
+      nome: 'Spring Boot',
+      imagem: 'http://rdrblog.com.br/wp-content/uploads/2020/08/Spring-BOOT-Interview-questions-1.jpg',
+      curso: 'Spring',
+      duracao: '4 meses',
+      descricao: 'Curso Completo de springBoot',
+      valor: 1,
+      emPromocao: true,
+      valorComDesconto: 3,
+      desconto: 4,
+    },
+  ]
+
+  getCursos(): Cursos[] {
+    return this.cursos;
+  }
+
+  addCursos(cursos: Cursos) {
+    this.cursos.push(cursos);
+  }
+
+  deleteCursos(cursos: Cursos) {
+    this.cursos.splice(-1, 1);
+  }
 
   constructor() { }
 }

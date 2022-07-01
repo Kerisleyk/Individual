@@ -10,8 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class AdicaoCursosComponent implements OnInit {
   cursos: Cursos = {} as Cursos
 
-  constructor(
-    private cursosService: CursosService
+  constructor(  private cursosService: CursosService
   ) {}
 
   onSubmit() {
@@ -21,6 +20,4 @@ export class AdicaoCursosComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-
 }

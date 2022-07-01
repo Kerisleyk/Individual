@@ -1,11 +1,11 @@
 <mat-toolbar color="primary">
-  <mat-toolbar-row>   
+  <mat-toolbar-row>
     <span>
       <button mat-button [routerLink]="['']">My App</button></span>
-    <span class="example-spacer"></span>
-    <button mat-button [matMenuTriggerFor]="menu" mat-icon-button class="example-icon" >
+    <span class="espacamento"></span>
+    <button mat-button [matMenuTriggerFor]="menu" mat-icon-button class="button" >
       <mat-menu #menu="matMenu">
-        <button mat-menu-item [routerLink]="['/listagem-cursos']">Home</button>
+        <button mat-menu-item [routerLink]="['/listagem-cursos']">Cursos</button>
         <button mat-menu-item [routerLink]="['/login']">Login</button>
         <button mat-menu-item [routerLink]="['/cadastro']">Cadastro</button>
       </mat-menu>

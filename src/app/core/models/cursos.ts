@@ -4,5 +4,8 @@ export interface Cursos {
   curso: string;
   duracao: string;
   descricao: string;
-
+  valor: number;
+  emPromocao: boolean;
+  valorComDesconto?: number;
+  desconto?: number;
 }
