@@ -1,15 +1,19 @@
 <div class="container">
-  <mat-grid-list cols="2">
+  <mat-grid-list cols="2" >
     <mat-grid-tile class="cards" *ngFor="let curso of cursos">
-      <mat-card class="cards">
-        <mat-card-header>
+      <mat-card class="cards1" >
+        <mat-card-header >
+          <P>id:{{curso.id}}</P>
           <mat-card-title>{{curso.nome}}</mat-card-title>
           <mat-card-subtitle>{{curso.duracao}}</mat-card-subtitle>
+          <button 
+          mat-button (click)="deletarCurso(curso.id)"atTooltip="Deletar Curso" color="warn"><mat-icon > delete</mat-icon></button>
         </mat-card-header>
-        <img mat-card-image src="{{curso.imagem}}">
+        <img class="img" mat-card-image src="{{curso.imagem}}">
         <mat-card-content>{{curso.descricao}}</mat-card-content>
-        <mat-card-actions>
-        </mat-card-actions>
+        <mat-card-actions class="acoes">
+          <p> valor {{curso.valor.toString() | wrap: 'R$':'BRL'}}</p>
+               </mat-card-actions>
       </mat-card>
     </mat-grid-tile>
   </mat-grid-list>

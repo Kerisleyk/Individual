@@ -7,49 +7,31 @@ import { Cursos } from '../models/cursos';
 export class CursosService {
   cursos: Cursos[] = [
     {
+      id: 0,
       nome: 'material',
       imagem: 'https://descargarsoftwaregratis.com/wp-content/uploads/2021/10/Angular-Desde-Cero.jpeg',
       curso: 'material angular',
       duracao: '4 meses',
       descricao: 'Curso Completo de AngularMaterial',
-      valor: 1,
+      valor: 82,
       emPromocao: true,
       desconto: 4,
 
 
     },
     {
+      id: 1,
       nome: 'Spring Boot',
       imagem: 'http://rdrblog.com.br/wp-content/uploads/2020/08/Spring-BOOT-Interview-questions-1.jpg',
       curso: 'Spring',
       duracao: '4 meses',
       descricao: 'Curso Completo de springBoot',
-      valor: 1,
+      valor: 53,
       emPromocao: true,
       desconto: 4,
     },
 
-    {
-      nome: 'Spring Boot',
-      imagem: 'http://rdrblog.com.br/wp-content/uploads/2020/08/Spring-BOOT-Interview-questions-1.jpg',
-      curso: 'Spring',
-      duracao: '4 meses',
-      descricao: 'Curso Completo de springBoot',
-      valor: 1,
-      emPromocao: true,
-      desconto: 4,
-    },
 
-    {
-      nome: 'Spring Boot',
-      imagem: 'http://rdrblog.com.br/wp-content/uploads/2020/08/Spring-BOOT-Interview-questions-1.jpg',
-      curso: 'Spring',
-      duracao: '4 meses',
-      descricao: 'Curso Completo de springBoot',
-      valor: 1,
-      emPromocao: true,
-      desconto: 4,
-    },
   ]
 
   getCursos(): Cursos[] {
@@ -60,8 +42,8 @@ export class CursosService {
     this.cursos.push(cursos);
   }
 
-  deleteCursos(cursos: Cursos) {
-    this.cursos.splice(-1, 1);
+  deleteCursos(number:number) {
+    this.cursos.splice(number,1)
   }
 
   constructor() { }

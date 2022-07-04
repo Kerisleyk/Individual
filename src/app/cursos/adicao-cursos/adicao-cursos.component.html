@@ -17,7 +17,7 @@
         <mat-label>duração</mat-label>
         <input name="duracao" matInput [(ngModel)]="cursos.duracao" required />
         <mat-error ng-show="form.duracao.$error.required">Duração do cursos é obrigatório</mat-error>
-        <mat-icon matPrefix>pin_drop</mat-icon>
+        <mat-icon matPrefix>timer</mat-icon>
     </mat-form-field>
 
     <mat-form-field appearance="fill" class="escrita">
@@ -29,9 +29,9 @@
 
     <mat-form-field appearance="fill" class="escrita">
         <mat-label>valor</mat-label>
-        <input name="valor" matInput [(ngModel)]="cursos.valor" required />
-        <mat-error ng-show="form.valor.$error.required">Descrição do Curso é obrigatório</mat-error>
-        <mat-icon matPrefix>pin_drop</mat-icon>
+        <input name="valor" matInput  [(ngModel)]="cursos.valor" required type="number"/>
+        <mat-error ng-show="form.valor.$error.required">Valor do Curso é obrigatório</mat-error>
+        <mat-icon matPrefix>pin</mat-icon>
     </mat-form-field>
 
     <section class="form-check form-switch" class="escrita">
@@ -50,8 +50,6 @@
         <mat-error ng-show="form.imagem.$error.required">Imagem é Obrigatoria</mat-error>
         <mat-icon matPrefix>photo</mat-icon>
     </mat-form-field>
-    
-    <p>{{'160' | wrap:'R$': 'BRL'}}</p>
     
     <button (click)="onSubmit()" mat-stroked-button color="warn" [disabled]="form.invalid">adicionar</button>
 </form>

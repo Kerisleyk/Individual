@@ -8,11 +8,10 @@ export class WrapPipe implements PipeTransform {
   transform(input: string, wrap: string, ends?: string):
     string {
       if (isString(input) && !isUndefined(wrap)){
-        return [wrap, input, ends || wrap].join('')
+        return [wrap,' ', input,' ', ends || wrap].join('')
       }else {
         return input
       }
-    // return isString(input) && !isUndefined(wrap) ? [wrap, input, ends || wrap].join('') : input;
   }
 
 }

@@ -1,6 +1,10 @@
 .cards {
-  width: 418px;
-  height: 390px;
+  width: 450px;
+  height: 400px;
+  color: #fff;
+}
+.cards1{
+  background-color: #7B1FA2;
 }
 
 .container {
@@ -9,6 +13,12 @@
 }
 
 .img {
-  width: 450px; 
-  height: 300px;
+ width: 481px; 
+ height: 260px;
+
+}
+.acoes{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
