@@ -9,27 +9,28 @@
 
 
             <form #form="ngForm">
-                <mat-form-field appearance="fill">
+                <mat-form-field appearance="fill" class="escrita">
                     <mat-label>Nome</mat-label>
                     <input name="nome" matInput [(ngModel)]="user.nome" required />
                     <mat-error ng-show="form.nome.$error.required">Campo obrigatório</mat-error>
                     <mat-icon matPrefix>person</mat-icon>
                 </mat-form-field>
 
-                <mat-form-field appearance="fill">
+                <mat-form-field appearance="fill" class="escrita">
                     <mat-label>NICK</mat-label>
                     <input name="NICK" matInput [(ngModel)]="user.nick" required />
                     <mat-error ng-show="form.NICK.$error.required">Nick obrigatório</mat-error>
                     <mat-icon matPrefix>pin_drop</mat-icon>
                 </mat-form-field>
 
-                <mat-form-field appearance="fill">
+                <mat-form-field appearance="fill" class="escrita">
                     <mat-label>Email</mat-label>
                     <input name="email" matInput [(ngModel)]="user.email" required email="true" />
                     <mat-error ng-show="form.email.$error.email"> Email invalido</mat-error>
                     <mat-icon matPrefix>email</mat-icon>
                 </mat-form-field>
-                <mat-form-field appearance="fill">
+
+                <mat-form-field appearance="fill" class="escrita">
                     <mat-label>Enter your password</mat-label>
                     <input name="senha" matInput required minlength="8" [(ngModel)]="user.senha"
                         [type]="hide ? 'password' : 'text'">
@@ -39,8 +40,8 @@
                         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                     </button>
                 </mat-form-field>
+                
                 <button type="submit" [routerLink]="['/listagem-cursos']" class="btnLoginBG" mat-raised-button
                     (click)="onSubmit()" [disabled]="form.invalid">
-                    Cadastrar
-                </button>
+                    Cadastrar</button>
             </form>

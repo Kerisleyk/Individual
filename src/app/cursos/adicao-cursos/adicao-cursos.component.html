@@ -1,53 +1,53 @@
 <form class="fundo" #form="ngForm">
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="fill" class="escrita">
         <mat-label>nome</mat-label>
         <input name="nome" matInput [(ngModel)]="cursos.nome" required />
         <mat-error ng-show="form.nome.$error.required">Campo obrigatório</mat-error>
         <mat-icon matPrefix>person</mat-icon>
     </mat-form-field>
     
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="fill" class="escrita">
         <mat-label>curso</mat-label>
         <input name="curso" matInput [(ngModel)]="cursos.curso" required />
-        <mat-error ng-show="form.NICK.$error.required">Curso é obrigatório</mat-error>
+        <mat-error ng-show="form.curso.$error.required">Curso é obrigatório</mat-error>
         <mat-icon matPrefix>pin_drop</mat-icon>
     </mat-form-field>
 
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="fill" class="escrita">
         <mat-label>duração</mat-label>
         <input name="duracao" matInput [(ngModel)]="cursos.duracao" required />
-        <mat-error ng-show="form.NICK.$error.required">Duração do cursos é obrigatório</mat-error>
+        <mat-error ng-show="form.duracao.$error.required">Duração do cursos é obrigatório</mat-error>
         <mat-icon matPrefix>pin_drop</mat-icon>
     </mat-form-field>
 
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="fill" class="escrita">
         <mat-label>descrição</mat-label>
         <input name="descricao" matInput [(ngModel)]="cursos.descricao" required />
-        <mat-error ng-show="form.NICK.$error.required">Descrição do Curso é obrigatório</mat-error>
+        <mat-error ng-show="form.descricao$error.required">Descrição do Curso é obrigatório</mat-error>
         <mat-icon matPrefix>pin_drop</mat-icon>
     </mat-form-field>
 
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="fill" class="escrita">
         <mat-label>valor</mat-label>
         <input name="valor" matInput [(ngModel)]="cursos.valor" required />
         <mat-error ng-show="form.valor.$error.required">Descrição do Curso é obrigatório</mat-error>
         <mat-icon matPrefix>pin_drop</mat-icon>
     </mat-form-field>
 
-    <div class="form-check form-switch">
-        <label for="emPromocao" class="form-check-label">Em promoção?</label>
+    <section class="form-check form-switch" class="escrita">
+        <mat-label for="emPromocao" class="form-check-label" >Em Promoção?</mat-label>
         <input id="emPromocao" type="checkbox" class="form-check-input" name="emPromocao" [(ngModel)]="cursos.emPromocao" />
-    </div>
-    <div *ngIf="cursos.emPromocao" class="mb-3">
-        <label for="desconto">Desconto</label>
-        <input #descontoInp="ngModel" id="desconto" type="number" name="desconto" [(ngModel)]="cursos.desconto" class="form-control" min="0" max="1" step=".01" required />
-        <small *ngIf="descontoInp.touched && descontoInp.invalid" class="text-danger">O campo é inválido</small>
-    </div>
+      </section>
 
-    <mat-form-field appearance="fill">
+      <mat-card *ngIf="cursos.emPromocao" class="escrita">
+        <mat-label for="desconto">desconto</mat-label>
+        <input #descontoInp="ngModel" id="desconto" type="number" name="desconto" [(ngModel)]="cursos.desconto" class="form-control" min="0" max="1" step=".01" required/>
+    </mat-card>
+
+    <mat-form-field appearance="fill" class="escrita">
         <mat-label>imagem</mat-label>
         <input name="imagem" matInput [(ngModel)]="cursos.imagem" required />
-        <mat-error ng-show="form.NICK.$error.required">Imagem é Obrigatoria</mat-error>
+        <mat-error ng-show="form.imagem.$error.required">Imagem é Obrigatoria</mat-error>
         <mat-icon matPrefix>photo</mat-icon>
     </mat-form-field>
     

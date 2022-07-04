@@ -6,6 +6,5 @@ export interface Cursos {
   descricao: string;
   valor: number;
   emPromocao: boolean;
-  valorComDesconto?: number;
   desconto?: number;
 }

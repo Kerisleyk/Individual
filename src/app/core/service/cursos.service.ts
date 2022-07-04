@@ -14,7 +14,6 @@ export class CursosService {
       descricao: 'Curso Completo de AngularMaterial',
       valor: 1,
       emPromocao: true,
-      valorComDesconto: 3,
       desconto: 4,
 
 
@@ -27,7 +26,28 @@ export class CursosService {
       descricao: 'Curso Completo de springBoot',
       valor: 1,
       emPromocao: true,
-      valorComDesconto: 3,
+      desconto: 4,
+    },
+
+    {
+      nome: 'Spring Boot',
+      imagem: 'http://rdrblog.com.br/wp-content/uploads/2020/08/Spring-BOOT-Interview-questions-1.jpg',
+      curso: 'Spring',
+      duracao: '4 meses',
+      descricao: 'Curso Completo de springBoot',
+      valor: 1,
+      emPromocao: true,
+      desconto: 4,
+    },
+
+    {
+      nome: 'Spring Boot',
+      imagem: 'http://rdrblog.com.br/wp-content/uploads/2020/08/Spring-BOOT-Interview-questions-1.jpg',
+      curso: 'Spring',
+      duracao: '4 meses',
+      descricao: 'Curso Completo de springBoot',
+      valor: 1,
+      emPromocao: true,
       desconto: 4,
     },
   ]
